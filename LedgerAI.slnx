@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LedgerAI.API/LedgerAI.API.csproj" />
+    <Project Path="src/LedgerAI.Application/LedgerAI.Application.csproj" />
+    <Project Path="src/LedgerAI.Domain/LedgerAI.Domain.csproj" />
+    <Project Path="src/LedgerAI.Infrastructure/LedgerAI.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LedgerAI.IntegrationTests/LedgerAI.IntegrationTests.csproj" />
+    <Project Path="tests/LedgerAI.UnitTests/LedgerAI.UnitTests.csproj" />
+  </Folder>
+</Solution>
