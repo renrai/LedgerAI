@@ -18,7 +18,8 @@ public sealed record CategorizationSuggestion(
     Guid TransactionId,
     Guid? CategoryId,
     double Confidence,
-    string? Reason = null);
+    string? Reason = null,
+    CategorizationSource Source = CategorizationSource.Ai);
 
 /// <summary>
 /// Abstração do classificador de transações. A implementação padrão usa um LLM via

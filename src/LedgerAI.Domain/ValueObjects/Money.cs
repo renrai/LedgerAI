@@ -5,13 +5,14 @@ namespace LedgerAI.Domain.ValueObjects;
 
 /// <summary>
 /// Valor monetário imutável. Sempre não negativo — o sinal é dado pelo <c>TransactionType</c>.
+/// Mapeado no EF Core 10 como <i>complex type</i> (colunas amount + currency na mesma tabela).
 /// </summary>
 public readonly record struct Money : IComparable<Money>
 {
     public const string DefaultCurrency = "BRL";
 
-    public decimal Amount { get; }
-    public string Currency { get; }
+    public decimal Amount { get; init; }
+    public string Currency { get; init; }
 
     public Money(decimal amount, string currency = DefaultCurrency)
     {

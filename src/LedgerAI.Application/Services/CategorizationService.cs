@@ -58,7 +58,7 @@ public sealed class CategorizationService(
                 continue;
             }
 
-            transaction.Categorize(category, CategorizationSource.Ai, suggestion.Confidence);
+            transaction.Categorize(category, suggestion.Source, suggestion.Confidence);
             categorized++;
             items.Add(new CategorizedItem(transaction.Id, transaction.Description, category.Id, category.Name, suggestion.Confidence, suggestion.Reason));
         }
